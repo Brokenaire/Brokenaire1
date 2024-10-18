@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Ticker</title>
+    <style>
+        /* Basic styling for the ticker */
+        .ticker {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            background: #f0f0f0; /* Light background for visibility */
+            padding: 10px; /* Padding around the ticker */
+        }
+
+        .ticker ul {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            animation: ticker 15s linear infinite;
+        }
+
+        .ticker li {
+            display: inline;
+            list-style: none;
+            margin-right: 50px; /* Space between news items */
+        }
+
+        @keyframes ticker {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Breaking News Area -->
+    <div class="col-12 col-md-6"> 
+        <div class="breaking-news-area">
+            <h5 class="breaking-news-title">Breaking news</h5>
+            <div id="breakingNewsTicker" class="ticker">
+                <ul id="newsList">
+                    <li><a href="#">Brexit breakthrough in Brussels comes after week of drama</a></li>
+                    <li><a href="#">Brexit breakthrough in Brussels</a></li>
+                    <li><a href="#">Brexit breakthrough in Brussels comes after week of drama</a></li>
+                    <li><a href="#">Brex comes after week of drama</a></li>
+                    <li><a href="#">Brexit breakthrough in Bweek of drama</a></li>
+                    <li><a href="#">Brexit bssels comes after week of drama</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const apiKey = '149acd3c2c394dae8d00be80b8f965c2'; // Your NewsAPI key
+        const apiUrl = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + apiKey; // Fetch top headlines from the US
+
+        // Fetch top headlines and update the ticker
+        async function fetchNews() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                const data = await response.json();
+                console.log('API Response:', data); // Log the entire response for debugging
+
+                const articles = data.articles.slice(0, 5); // Limit to the first 5 articles
+                const newsList = document.getElementById('newsList');
+
+                // Clear existing items
+                newsList.innerHTML = '';
+
+                // Check if there are articles
+                if (!articles || articles.length === 0) {
+                    const noArticlesItem = document.createElement('li');
+                    noArticlesItem.className = 'ticker-item';
+                    noArticlesItem.textContent = 'No articles found.';
+                    newsList.appendChild(noArticlesItem);
+                    return; // Exit if no articles found
+                }
+
+                // Loop through the articles and create list items with links
+                articles.forEach((article) => {
+                    const listItem = document.createElement('li'); // Create a new list item
+                    listItem.className = 'ticker-item'; // Add your class for styling
+
+                    const link = document.createElement('a'); // Create a new anchor tag
+                    link.href = article.url; // Set the href attribute to the article URL
+                    link.target = "_blank"; // Open the link in a new tab
+                    link.textContent = article.title; // Set the link text to the article title
+
+                    listItem.appendChild(link); // Append the link to the list item
+                    newsList.appendChild(listItem); // Append the list item to the news list
+                });
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+
+        // Initial fetch of news articles
+        fetchNews();
+    </script>
+</body>
+</html>

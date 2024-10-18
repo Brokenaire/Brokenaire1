@@ -1,0 +1,85 @@
+    /* ----------------------------------------------------------
+    :: Template Name: TheGazette - News Magazine HTML5 Template
+    :: Author: Colorlib
+    :: Author URL: https://colorlib.com
+    :: Description: TheGazette is a smart & creative news & magazine template. It's suitable for all news & magazine website.
+    :: Version: 1.0.0
+    :: Created: 17 January 2018
+    :: Last Updated: 17 January 2018
+    ---------------------------------------------------------- */
+
+    /* ============ PLACE YOUR CUSTOM CSS HERE ============ */
+
+
+    .middle-header .col-12 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* Ensure it takes the full height of the parent */
+    }
+
+    .breaking-news-area {
+        margin-top: -45px; /* Adjust the value as needed */
+        margin-left: -30px;
+    }
+
+    .stock-news-area {
+        margin-top: 5px; /* Adjust the value as needed */
+    }
+    
+    .single-stock-report {
+        margin-bottom: -50px; /* Adjust the value as needed */
+    }
+
+    .plus-index {
+        color: green;
+    }
+    .minus-index {
+        color: red;
+    }
+    /* Add other styles as needed */
+    .ticker ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        animation: ticker 10s linear infinite;
+    }
+    @keyframes ticker {
+        from { transform: translateY(0); }
+        to { transform: translateY(-100%); }
+    }
+
+#breakingNewsTicker {
+    position: relative;
+    height: 30px; /* Set the height of the ticker */
+    overflow: hidden; /* Hide the overflow to create the scrolling effect */
+    background-color: transparent; /* Optional: LED board-like background */
+}
+
+#newsList {
+    display: inline-block;
+    white-space: nowrap; /* Keep all news items in one line */
+    position: absolute; /* Absolute positioning to control the animation */
+    animation: scroll-left 10s linear infinite; /* Animate the news items */
+}
+
+#newsList li {
+    display: inline-block; /* Display list items in a row */
+    padding-right: 50px; /* Space between news items */
+    font-size: 16px;
+    color: #ff084e; /* LED-like red color */
+    font-family: 'Courier', monospace; /* Optional: LED-style font */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-100%); /* Move left until the list is off-screen */
+    }
+}
+
+
+    

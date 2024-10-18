@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>TheBrokenaire | Home</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="https://fontmeme.com/permalink/241018/4e34a6d0ddd3b117696e149077257269.png">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <div class="top-header">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <!-- Breaking News Area -->
+                    <div class="col-12 col-md-6">
+                        <div class="breaking-news-area">
+                            <h5 class="breaking-news-title">Top Headlines</h5>
+                            <div id="breakingNewsTicker" class="ticker">
+                                <ul id="newsList">
+                                    <!-- News items will be injected here -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stock News Area -->
+                    <div class="col-12 col-md-6">
+                        <div class="stock-news-area">
+                            <div id="stockNewsTicker" class="ticker">
+                                <ul>
+                                    <li>
+                                        <div class="single-stock-report">
+                                            <div class="stock-values">
+                                                <span>BTC/USD</span>
+                                                <span id="btc-price-usd">Fetching...</span>
+                                            </div>
+                                            <div class="stock-index plus-index">
+                                                <h4 id="btc-price-change">0.00</h4> <!-- Placeholder for price change -->
+                                            </div>
+                                        </div>
+                                        <div class="single-stock-report">
+                                            <div class="stock-values">
+                                                <span>BTC/INR</span>
+                                                <span id="btc-price-inr">Fetching...</span>
+                                            </div>
+                                            <div class="stock-index plus-index">
+                                                <h4 id="btc-price-inr-change">0.00</h4> <!-- Placeholder for price change -->
+                                            </div>
+                                        </div>
+                                        <div class="single-stock-report">
+                                            <div class="stock-values">
+                                                <span>BTC/EUR</span>
+                                                <span id="btc-price-eur">Fetching...</span>
+                                            </div>
+                                            <div class="stock-index plus-index">
+                                                <h4 id="btc-price-eur-change">0.00</h4> <!-- Placeholder for price change -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="single-stock-report">
+                                            <div class="stock-values">
+                                                <span>ETH/USD</span>
+                                                <span id="eth-price-usd">Fetching...</span>
+                                            </div>
+                                            <div class="stock-index minus-index">
+                                                <h4 id="eth-price-change">0.00</h4> <!-- Placeholder for price change -->
+                                            </div>
+                                        </div>
+                                        <div class="single-stock-report">
+                                            <div class="stock-values">
+                                                <span>ETH/INR</span>
+                                                <span id="eth-price-inr">Fetching...</span>
+                                            </div>
+                                            <div class="stock-index plus-index">
+                                                <h4 id="eth-price-inr-change">0.00</h4> <!-- Placeholder for price change -->
+                                            </div>
+                                        </div>
+                                        <div class="single-stock-report">
+                                            <div class="stock-values">
+                                                <span>ETH/EUR</span>
+                                                <span id="eth-price-eur">Fetching...</span>
+                                            </div>
+                                            <div class="stock-index minus-index">
+                                                <h4 id="eth-price-eur-change">0.00</h4> <!-- Placeholder for price change -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="single-stock-report">
+                                            <div class="stock-values">
+                                                <span>USDT/USD</span>
+                                                <span id="usdt-price-usd">Fetching...</span>
+                                            </div>
+                                            <div class="stock-index plus-index">
+                                                <h4 id="usdt-price-change">0.00</h4> <!-- Placeholder for price change -->
+                                            </div>
+                                        </div>
+                                        <div class="single-stock-report">
+                                            <div class="stock-values">
+                                                <span>USDT/INR</span>
+                                                <span id="usdt-price-inr">Fetching...</span>
+                                            </div>
+                                            <div class="stock-index plus-index">
+                                                <h4 id="usdt-price-inr-change">0.00</h4> <!-- Placeholder for price change -->
+                                            </div>
+                                        </div>
+                                        <div class="single-stock-report">
+                                            <div class="stock-values">
+                                                <span>USDT/EUR</span>
+                                                <span id="usdt-price-eur">Fetching...</span>
+                                            </div>
+                                            <div class="stock-index plus-index">
+                                                <h4 id="usdt-price-eur-change">0.00</h4> <!-- Placeholder for price change -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Middle Header Area -->
+        <div class="middle-header">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <!-- Logo Area -->
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="logo-area">
+                            <a href="index.html"><img src="https://fontmeme.com/permalink/241018/fd3e5fc1a05913c69ac90a7389d950bf.png" alt="logo"></a>
+                        </div>
+                    </div>
+                    <!-- Header Advert Area 
+                    <div class="col-12 col-md-8">
+                        <div class="header-advert-area">
+                            <a href="#"><img src="img/core-img/logo.png" alt="header-add"></a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Header Area -->
+        <div class="bottom-header">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <div class="main-menu">
+                            <nav class="navbar navbar-expand-lg">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#gazetteMenu" aria-controls="gazetteMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> Menu</button>
+                                <div class="collapse navbar-collapse" id="gazetteMenu">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Today <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="index.html">Home</a>
+                                                <a class="dropdown-item" href="catagory.html">Catagory</a>
+                                                <a class="dropdown-item" href="single-post.html">Single Post</a>
+                                                <a class="dropdown-item" href="about-us.html">About Us</a>
+                                                <a class="dropdown-item" href="contact.html">Contact</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Politics</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Lifestyle</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Travel</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Health</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Entertainment</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">sport</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Search Form -->
+                                    <div class="header-search-form mr-auto">
+                                        <form action="#">
+                                            <input type="search" placeholder="Input your keyword then press enter..." id="search" name="search">
+                                            <input class="d-none" type="submit" value="submit">
+                                        </form>
+                                    </div>
+                                    <!-- Search btn -->
+                                    <div id="searchbtn">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Welcome Blog Slide Area Start -->
+    <section class="welcome-blog-post-slide owl-carousel">
+        <!-- Single Blog Post -->
+        <div class="single-blog-post-slide bg-img background-overlay-5" id="headnews1" style="background-image: url(img/bg-img/1.jpg);">
+            <!-- Single Blog Post Content -->
+            <div class="single-blog-post-content">
+                <div class="tags">
+                    <a href="#">crypto</a>
+                </div>
+                <h3><a href="#" class="font-pt">Crypto world goes mad</a></h3>
+                <div class="date">
+                    <a href="#">March 29, 2018</a>
+                </div>
+            </div>
+        </div>
+        <!-- Single Blog Post -->
+        <div class="single-blog-post-slide bg-img background-overlay-5" id="headnews2" style="background-image: url(img/bg-img/2.jpg);">
+            <!-- Single Blog Post Content -->
+            <div class="single-blog-post-content">
+                <div class="tags">
+                    <a href="#">live</a>
+                </div>
+                <h3><a href="#" class="font-pt">The latest news live</a></h3>
+                <div class="date">
+                    <a href="#">March 29, 2018</a>
+                </div>
+            </div>
+        </div>
+        <!-- Single Blog Post -->
+        <div class="single-blog-post-slide bg-img background-overlay-5" id="headnews3" style="background-image: url(img/bg-img/3.jpg);">
+            <!-- Single Blog Post Content -->
+            <div class="single-blog-post-content">
+                <div class="tags">
+                    <a href="#">politics</a>
+                </div>
+                <h3><a href="#" class="font-pt">Financial advices</a></h3>
+                <div class="date">
+                    <a href="#">March 29, 2018</a>
+                </div>
+            </div>
+        </div>
+        <!-- Single Blog Post -->
+        <div class="single-blog-post-slide bg-img background-overlay-5" id="headnews4" style="background-image: url(img/bg-img/2.jpg);">
+            <!-- Single Blog Post Content -->
+            <div class="single-blog-post-content">
+                <div class="tags">
+                    <a href="#">live</a>
+                </div>
+                <h3><a href="#" class="font-pt">The latest news live</a></h3>
+                <div class="date">
+                    <a href="#">March 29, 2018</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Welcome Blog Slide Area End -->
+
+    <!-- Latest News Marquee Area Start -->
+    <div class="latest-news-marquee-area">
+        <div class="simple-marquee-container">
+            <div class="marquee">
+                <ul class="marquee-content-items">
+                    <li>
+                        <a href="#"><span class="latest-news-time"></span> The Facebook Live stream that could presage TV</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="latest-news-time"></span> Opinion: It's time to start talking about impeachment</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="latest-news-time"></span> Clinton aims to shore up Wisconsin with new TV ads</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="latest-news-time"></span> Trump signs tax bill before leaving for Mar-a-Lago</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="latest-news-time"></span> 5 best investment options for senior citizens for high returns</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="latest-news-time"></span> Whether you are seeking a regular income, tax benefits, or a balance of growth and .......</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Latest News Marquee Area End -->
+
+    <!-- Main Content Area Start -->
+    <section class="main-content-wrapper section_padding_100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <!-- Gazette Welcome Post -->
+                    <div class="gazette-welcome-post">
+                        <!-- Post Tag -->
+                        <div class="gazette-post-tag">
+                            <a href="#">Politices</a>
+                        </div>
+                        <h2 class="font-pt">What's behind the world obsession with gems?</h2>
+                        <p class="gazette-post-date">March 29, 2016</p>
+                        <!-- Post Thumbnail -->
+                        <div class="blog-post-thumbnail my-5">
+                            <img src="img/blog-img/1.jpg" alt="post-thumb">
+                        </div>
+                        <!-- Post Excerpt -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend. Nullam viverra tincidunt dolor, at pulvinar dui. Nullam at risus ut ipsum viverra posuere. Aliquam quis convallis enim. Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. Aliquam finibus nulla quam, a iaculis justo finibus non. Suspendisse in fermentum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend.</p>
+                        <!-- Reading More -->
+                        <div class="post-continue-reading-share d-sm-flex align-items-center justify-content-between mt-30">
+                            <div class="post-continue-btn">
+                                <a href="#" class="font-pt">Continue Reading <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="post-share-btn-group">
+                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gazette-todays-post section_padding_100_50">
+                        <div class="gazette-heading">
+                            <h4>today’s most popular</h4>
+                        </div>
+                        <!-- Single Today Post -->
+                        <div class="gazette-single-todays-post d-md-flex align-items-start mb-50">
+                            <div class="todays-post-thumb">
+                                <img src="img/blog-img/2.jpg" alt="">
+                            </div>
+                            <div class="todays-post-content">
+                                <!-- Post Tag -->
+                                <div class="gazette-post-tag">
+                                    <a href="#">News</a>
+                                </div>
+                                <h3><a href="#" class="font-pt mb-2">$250-million mansion is most expensive</a></h3>
+                                <span class="gazette-post-date mb-2">March 29, 2016</span>
+                                <a href="#" class="post-total-comments">3 Comments</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend. Nullam viverra tincidunt dolor, at pulvinar dui. Nullam at risus ut ipsum viverra posuere.</p>
+                            </div>
+                        </div>
+                        <!-- Single Today Post -->
+                        <div class="gazette-single-todays-post d-md-flex align-items-start mb-50">
+                            <div class="todays-post-thumb">
+                                <img src="img/blog-img/3.jpg" alt="">
+                            </div>
+                            <div class="todays-post-content">
+                                <!-- Post Tag -->
+                                <div class="gazette-post-tag">
+                                    <a href="#">Life</a>
+                                </div>
+                                <h3><a href="#" class="font-pt mb-2">Homeless man steals $350,000 </a></h3>
+                                <p class="gazette-post-date mb-2">March 29, 2016</p>
+                                <a href="#" class="post-total-comments">3 Comments</a>
+                                <p>Aliquam quis convallis enim. Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. Aliquam finibus nulla quam, a iaculis justo finibus non. Suspendisse in fermentum nunc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3 col-md-6">
+                    <div class="sidebar-area">
+                        <!-- Breaking News Widget -->
+                        <div class="breaking-news-widget">
+                            <div class="widget-title">
+                                <h5>breaking news</h5>
+                            </div>
+                            <!-- Single Breaking News Widget -->
+                            <div class="single-breaking-news-widget">
+                                <img src="img/blog-img/bn-1.jpg" alt="">
+                                <div class="breakingnews-title">
+                                    <p>breaking news</p>
+                                </div>
+                                <div class="breaking-news-heading gradient-background-overlay">
+                                    <h5 class="font-pt">China leads new global skyscraper record</h5>
+                                </div>
+                            </div>
+                            <!-- Single Breaking News Widget -->
+                            <div class="single-breaking-news-widget">
+                                <img src="img/blog-img/bn-2.jpg" alt="">
+                                <div class="breakingnews-title">
+                                    <p>breaking news</p>
+                                </div>
+                                <div class="breaking-news-heading gradient-background-overlay">
+                                    <h5 class="font-pt">Can a zebra crossing change its stripes?</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Don't Miss Widget -->
+                        <div class="donnot-miss-widget">
+                            <div class="widget-title">
+                                <h5>Don't miss</h5>
+                            </div>
+                            <!-- Single Don't Miss Post -->
+                            <div class="single-dont-miss-post d-flex mb-30">
+                                <div class="dont-miss-post-thumb">
+                                    <img src="img/blog-img/dm-1.jpg" alt="">
+                                </div>
+                                <div class="dont-miss-post-content">
+                                    <a href="#" class="font-pt">EU council reunites</a>
+                                    <span>Nov 29, 2017</span>
+                                </div>
+                            </div>
+                            <!-- Single Don't Miss Post -->
+                            <div class="single-dont-miss-post d-flex mb-30">
+                                <div class="dont-miss-post-thumb">
+                                    <img src="img/blog-img/dm-2.jpg" alt="">
+                                </div>
+                                <div class="dont-miss-post-content">
+                                    <a href="#" class="font-pt">A new way to travel the world</a>
+                                    <span>March 29, 2016</span>
+                                </div>
+                            </div>
+                            <!-- Single Don't Miss Post -->
+                            <div class="single-dont-miss-post d-flex mb-30">
+                                <div class="dont-miss-post-thumb">
+                                    <img src="img/blog-img/dm-3.jpg" alt="">
+                                </div>
+                                <div class="dont-miss-post-content">
+                                    <a href="#" class="font-pt">Why choose a bank?</a>
+                                    <span>March 29, 2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Advert Widget -->
+                        <div class="advert-widget">
+                            <div class="widget-title">
+                                <h5>Advert</h5>
+                            </div>
+                            <div class="advert-thumb mb-30">
+                                <a href="#"><img src="img/bg-img/add.png" alt=""></a>
+                            </div>
+                        </div>
+                        <!-- Subscribe Widget -->
+                        <div class="subscribe-widget">
+                            <div class="widget-title">
+                                <h5>subscribe</h5>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="email" name="email" id="subs_email" placeholder="Your Email">
+                                    <button type="submit">subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content Area End -->
+
+        <!-- Catagory Posts Area Start -->
+        <div class="gazette-catagory-posts-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <!-- Single Catagory Post -->
+                        <div class="gazette-single-catagory-post">
+                            <div class="single-catagory-post-thumb mb-15">
+                                <img src="img/blog-img/12.jpg" alt="">
+                            </div>
+                            <!-- Post Tag -->
+                            <div class="gazette-post-tag">
+                                <a href="#">Video</a>
+                            </div>
+                            <h5><a href="#" class="font-pt">Save the eniroment with this step</a></h5>
+                            <span>Nov 29, 2017</span>
+                        </div>
+                        <!-- Single Catagory Post -->
+                        <div class="gazette-single-catagory-post">
+                            <h5><a href="#" class="font-pt">Protest to be anounced in January</a></h5>
+                            <span>Nov 29, 2017</span>
+                        </div>
+                        <!-- Single Catagory Post -->
+                        <div class="gazette-single-catagory-post">
+                            <h5><a href="#" class="font-pt">10 Bills that the Congress in voting</a></h5>
+                            <span>Nov 29, 2017</span>
+                        </div>
+                        <!-- Single Catagory Post -->
+                        <div class="gazette-single-catagory-post">
+                            <h5><a href="#" class="font-pt">The narcissism of Donald Trump</a></h5>
+                            <span>Nov 29, 2017</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <!-- Single Catagory Post -->
+                                <div class="gazette-single-catagory-post">
+                                    <div class="single-catagory-post-thumb mb-15">
+                                        <img src="img/blog-img/14.jpg" alt="">
+                                    </div>
+                                    <!-- Post Tag -->
+                                    <div class="gazette-post-tag">
+                                        <a href="#">Others</a>
+                                    </div>
+                                    <h5><a href="#" class="font-pt">11 hottest toys for this holiday season</a></h5>
+                                    <span>Nov 29, 2017</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- Single Catagory Post -->
+                                <div class="gazette-single-catagory-post">
+                                    <div class="single-catagory-post-thumb mb-15">
+                                        <img src="img/blog-img/15.jpg" alt="">
+                                    </div>
+                                    <!-- Post Tag -->
+                                    <div class="gazette-post-tag">
+                                        <a href="#">Video</a>
+                                    </div>
+                                    <h5><a href="#" class="font-pt">Get this good feeling about life</a></h5>
+                                    <span>Nov 29, 2017</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- Single Catagory Post -->
+                                <div class="gazette-single-catagory-post">
+                                    <div class="single-catagory-post-thumb mb-15">
+                                        <img src="img/blog-img/16.jpg" alt="">
+                                    </div>
+                                    <!-- Post Tag -->
+                                    <div class="gazette-post-tag">
+                                        <a href="#">Interview</a>
+                                    </div>
+                                    <h5><a href="#" class="font-pt">Get this good feeling about life</a></h5>
+                                    <span>Nov 29, 2017</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- Single Catagory Post -->
+                                <div class="gazette-single-catagory-post">
+                                    <div class="single-catagory-post-thumb mb-15">
+                                        <img src="img/blog-img/17.jpg" alt="">
+                                    </div>
+                                    <!-- Post Tag -->
+                                    <div class="gazette-post-tag">
+                                        <a href="#">Video</a>
+                                    </div>
+                                    <h5><a href="#" class="font-pt">11 hottest toys for this holiday season</a></h5>
+                                    <span>Nov 29, 2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!-- Single Catagory Post -->
+                        <div class="gazette-single-catagory-post">
+                            <div class="single-catagory-post-thumb mb-15">
+                                <img src="img/blog-img/13.jpg" alt="">
+                            </div>
+                            <!-- Post Tag -->
+                            <div class="gazette-post-tag">
+                                <a href="#">Video</a>
+                            </div>
+                            <h5><a href="#" class="font-pt">10 Bills that the Congress in voting</a></h5>
+                            <span>Nov 29, 2017</span>
+                        </div>
+                        <!-- Single Catagory Post -->
+                        <div class="gazette-single-catagory-post">
+                            <h5><a href="#" class="font-pt">Blair can't save Britain from Brexit</a></h5>
+                            <span>Nov 29, 2017</span>
+                        </div>
+                        <!-- Single Catagory Post -->
+                        <div class="gazette-single-catagory-post">
+                            <h5><a href="#" class="font-pt">Save the eniroment with this step</a></h5>
+                            <span>Nov 29, 2017</span>
+                        </div>
+                        <!-- Single Catagory Post -->
+                        <div class="gazette-single-catagory-post">
+                            <h5><a href="#" class="font-pt">Protest to be anounced in January</a></h5>
+                            <span>Nov 29, 2017</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Catagory Posts Area End -->
+
+    <!-- Video Posts Area Start -->
+    <section class="gazatte-video-post-area section_padding_100_70 bg-gray">
+        <div class="container">
+            <div class="row">
+                <!-- Single Video Post Start -->
+                <div class="col-12 col-md-3">
+                    <div class="single-video-post">
+                        <div class="video-post-thumb">
+                            <img src="img/blog-img/4.jpg" alt="">
+                            <a href="https://youtu.be/dIyXl9ZHEgg" class="videobtn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                        <h5><a href="#">Show suspended by PBS amid misconduct allegations</a></h5>
+                    </div>
+                </div>
+                <!-- Single Video Post Start -->
+                <div class="col-12 col-md-3">
+                    <div class="single-video-post">
+                        <div class="video-post-thumb">
+                            <img src="img/blog-img/5.jpg" alt="">
+                            <a href="https://youtu.be/dIyXl9ZHEgg" class="videobtn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                        <h5><a href="#">Parents to Congress</a></h5>
+                    </div>
+                </div>
+                <!-- Single Video Post Start -->
+                <div class="col-12 col-md-3">
+                    <div class="single-video-post">
+                        <div class="video-post-thumb">
+                            <img src="img/blog-img/6.jpg" alt="">
+                            <a href="https://youtu.be/dIyXl9ZHEgg" class="videobtn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                        <h5><a href="#">Third Buy Alert for This “Millionaire Maker” Stock</a></h5>
+                    </div>
+                </div>
+                <!-- Single Video Post Start -->
+                <div class="col-12 col-md-3">
+                    <div class="single-video-post">
+                        <div class="video-post-thumb">
+                            <img src="img/blog-img/7.jpg" alt="">
+                            <a href="https://youtu.be/dIyXl9ZHEgg" class="videobtn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                        <h5><a href="#">The Chicago Mercantile Exchange is set to begin</a></h5>
+                    </div>
+                </div>
+                <!-- Single Video Post Start -->
+                <div class="col-12 col-md-3">
+                    <div class="single-video-post">
+                        <div class="video-post-thumb">
+                            <img src="img/blog-img/8.jpg" alt="">
+                            <a href="https://youtu.be/dIyXl9ZHEgg" class="videobtn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                        <h5><a href="#">Trading bitcoin futures</a></h5>
+                    </div>
+                </div>
+                <!-- Single Video Post Start -->
+                <div class="col-12 col-md-3">
+                    <div class="single-video-post">
+                        <div class="video-post-thumb">
+                            <img src="img/blog-img/9.jpg" alt="">
+                            <a href="https://youtu.be/dIyXl9ZHEgg" class="videobtn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                        <h5><a href="#">Are ‘Micro-Mansions’ the Next Big Thing?</a></h5>
+                    </div>
+                </div>
+                <!-- Single Video Post Start -->
+                <div class="col-12 col-md-3">
+                    <div class="single-video-post">
+                        <div class="video-post-thumb">
+                            <img src="img/blog-img/10.jpg" alt="">
+                            <a href="https://youtu.be/dIyXl9ZHEgg" class="videobtn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                        <h5><a href="#">McKinney’s target market</a></h5>
+                    </div>
+                </div>
+                <!-- Single Video Post Start -->
+                <div class="col-12 col-md-3">
+                    <div class="single-video-post">
+                        <div class="video-post-thumb">
+                            <img src="img/blog-img/11.jpg" alt="">
+                            <a href="https://youtu.be/dIyXl9ZHEgg" class="videobtn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                        <h5><a href="#">Australian Property Prices Remain Flat</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Posts Area End -->
+
+    <!-- Editorial Area Start -->
+    <section class="gazatte-editorial-area section_padding_100 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="editorial-post-slides owl-carousel">
+
+                        <!-- Editorial Post Single Slide -->
+                        <div class="editorial-post-single-slide">
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <div class="editorial-post-thumb">
+                                        <img src="img/blog-img/bitcoin.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="editorial-post-content">
+                                        <!-- Post Tag -->
+                                        <div class="gazette-post-tag">
+                                            <a href="#">Editorial</a>
+                                        </div>
+                                        <h2><a href="#" class="font-pt mb-15">Move over, bitcoin. <br>Here comes litecoin</a></h2>
+                                        <p class="editorial-post-date mb-15">March 29, 2016</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend. Nullam viverra tincidunt dolor, at pulvinar dui. Nullam at risus ut ipsum viverra posuere. Aliquam quis convallis enim. Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Editorial Post Single Slide -->
+                        <div class="editorial-post-single-slide">
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <div class="editorial-post-thumb">
+                                        <img src="img/blog-img/bitcoin.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="editorial-post-content">
+                                        <!-- Post Tag -->
+                                        <div class="gazette-post-tag">
+                                            <a href="#">Editorial</a>
+                                        </div>
+                                        <h2><a href="#" class="font-pt mb-15">Move over, bitcoin. <br>Here comes litecoin</a></h2>
+                                        <p class="editorial-post-date mb-15">March 29, 2016</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend. Nullam viverra tincidunt dolor, at pulvinar dui. Nullam at risus ut ipsum viverra posuere. Aliquam quis convallis enim. Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Editorial Post Single Slide -->
+                        <div class="editorial-post-single-slide">
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <div class="editorial-post-thumb">
+                                        <img src="img/blog-img/bitcoin.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="editorial-post-content">
+                                        <!-- Post Tag -->
+                                        <div class="gazette-post-tag">
+                                            <a href="#">Editorial</a>
+                                        </div>
+                                        <h2><a href="#" class="font-pt mb-15">Move over, bitcoin. <br>Here comes litecoin</a></h2>
+                                        <p class="editorial-post-date mb-15">March 29, 2016</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend. Nullam viverra tincidunt dolor, at pulvinar dui. Nullam at risus ut ipsum viverra posuere. Aliquam quis convallis enim. Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Editorial Post Single Slide -->
+                        <div class="editorial-post-single-slide">
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <div class="editorial-post-thumb">
+                                        <img src="img/blog-img/bitcoin.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="editorial-post-content">
+                                        <!-- Post Tag -->
+                                        <div class="gazette-post-tag">
+                                            <a href="#">Editorial</a>
+                                        </div>
+                                        <h2><a href="#" class="font-pt mb-15">Move over, bitcoin. <br>Here comes litecoin</a></h2>
+                                        <p class="editorial-post-date mb-15">March 29, 2016</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices egestas nunc, quis venenatis orci tincidunt id. Fusce commodo blandit eleifend. Nullam viverra tincidunt dolor, at pulvinar dui. Nullam at risus ut ipsum viverra posuere. Aliquam quis convallis enim. Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Editorial Area End -->
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area bg-img background-overlay" style="background-image: url(img/bg-img/4.jpg);">
+        <!-- Top Footer Area -->
+        <div class="top-footer-area section_padding_100_70">
+            <div class="container">
+                <div class="row">
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="single-footer-widget">
+                            <div class="footer-widget-title">
+                                <h4 class="font-pt">Regions</h4>
+                            </div>
+                            <ul class="footer-widget-menu">
+                                <li><a href="#">U.S.</a></li>
+                                <li><a href="#">Africa</a></li>
+                                <li><a href="#">Americas</a></li>
+                                <li><a href="#">Asia</a></li>
+                                <li><a href="#">China</a></li>
+                                <li><a href="#">Europe</a></li>
+                                <li><a href="#">Middle</a></li>
+                                <li><a href="#">East</a></li>
+                                <li><a href="#">Opinion</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="single-footer-widget">
+                            <div class="footer-widget-title">
+                                <h4 class="font-pt">Fashion</h4>
+                            </div>
+                            <ul class="footer-widget-menu">
+                                <li><a href="#">Election 2016</a></li>
+                                <li><a href="#">Nation</a></li>
+                                <li><a href="#">World</a></li>
+                                <li><a href="#">Our Team</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="single-footer-widget">
+                            <div class="footer-widget-title">
+                                <h4 class="font-pt">Politics</h4>
+                            </div>
+                            <ul class="footer-widget-menu">
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Markets</a></li>
+                                <li><a href="#">Tech</a></li>
+                                <li><a href="#">Luxury</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="single-footer-widget">
+                            <div class="footer-widget-title">
+                                <h4 class="font-pt">Featured</h4>
+                            </div>
+                            <ul class="footer-widget-menu">
+                                <li><a href="#">Football</a></li>
+                                <li><a href="#">Golf</a></li>
+                                <li><a href="#">Tennis</a></li>
+                                <li><a href="#">Motorsport</a></li>
+                                <li><a href="#">Horseracing</a></li>
+                                <li><a href="#">Equestrian</a></li>
+                                <li><a href="#">Sailing</a></li>
+                                <li><a href="#">Skiing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="single-footer-widget">
+                            <div class="footer-widget-title">
+                                <h4 class="font-pt">FAQ</h4>
+                            </div>
+                            <ul class="footer-widget-menu">
+                                <li><a href="#">Aviation</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Traveller</a></li>
+                                <li><a href="#">Destinations</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Food/Drink</a></li>
+                                <li><a href="#">Hotels</a></li>
+                                <li><a href="#">Partner Hotels</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="single-footer-widget">
+                            <div class="footer-widget-title">
+                                <h4 class="font-pt">+More</h4>
+                            </div>
+                            <ul class="footer-widget-menu">
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Architecture</a></li>
+                                <li><a href="#">Arts</a></li>
+                                <li><a href="#">Autos</a></li>
+                                <li><a href="#">Luxury</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center">
+                    <div class="col-12">
+                        <div class="copywrite-text">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+    <script>
+const apiKey = 'CG-zN4mRF3ph6G9mTGSB7P61M1e'; // Your API key
+const coingeckoApiURL = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether&vs_currencies=usd,inr,eur&include_24hr_change=true';
+
+// Store previous prices for comparison
+let previousPrices = {
+    btc: { usd: 0, inr: 0, eur: 0 },
+    eth: { usd: 0, inr: 0, eur: 0 },
+    usdt: { usd: 0, inr: 0, eur: 0 }
+};
+
+async function fetchCryptoPrices() {
+    try {
+        // Fetch crypto prices from CoinGecko using your API key
+        const cryptoResponse = await fetch(coingeckoApiURL);
+        const cryptoData = await cryptoResponse.json();
+
+        console.log('API Response:', cryptoData); // Log the response for debugging
+
+        // Check if the data is valid
+        if (cryptoResponse.ok && cryptoData) {
+            // Extract current prices and 24h price changes
+            const btcPriceUsd = parseFloat(cryptoData.bitcoin.usd).toFixed(2);
+            const btcPriceChangeUsd = parseFloat(cryptoData.bitcoin.usd_24h_change).toFixed(2);
+
+            const btcPriceInr = parseFloat(cryptoData.bitcoin.inr).toFixed(2);
+            const btcPriceChangeInr = parseFloat(cryptoData.bitcoin.inr_24h_change).toFixed(2);
+
+            const btcPriceEur = parseFloat(cryptoData.bitcoin.eur).toFixed(2);
+            const btcPriceChangeEur = parseFloat(cryptoData.bitcoin.eur_24h_change).toFixed(2);
+
+            const ethPriceUsd = parseFloat(cryptoData.ethereum.usd).toFixed(2);
+            const ethPriceChangeUsd = parseFloat(cryptoData.ethereum.usd_24h_change).toFixed(2);
+
+            const ethPriceInr = parseFloat(cryptoData.ethereum.inr).toFixed(2);
+            const ethPriceChangeInr = parseFloat(cryptoData.ethereum.inr_24h_change).toFixed(2);
+
+            const ethPriceEur = parseFloat(cryptoData.ethereum.eur).toFixed(2);
+            const ethPriceChangeEur = parseFloat(cryptoData.ethereum.eur_24h_change).toFixed(2);
+
+            const usdtPriceUsd = parseFloat(cryptoData.tether.usd).toFixed(2);
+            const usdtPriceChangeUsd = parseFloat(cryptoData.tether.usd_24h_change).toFixed(2);
+
+            const usdtPriceInr = parseFloat(cryptoData.tether.inr).toFixed(2);
+            const usdtPriceChangeInr = parseFloat(cryptoData.tether.inr_24h_change).toFixed(2);
+
+            const usdtPriceEur = parseFloat(cryptoData.tether.eur).toFixed(2);
+            const usdtPriceChangeEur = parseFloat(cryptoData.tether.eur_24h_change).toFixed(2);
+
+            // Update price changes and display them
+            updatePrice('btc', btcPriceUsd, btcPriceInr, btcPriceEur, btcPriceChangeUsd, btcPriceChangeInr, btcPriceChangeEur);
+            updatePrice('eth', ethPriceUsd, ethPriceInr, ethPriceEur, ethPriceChangeUsd, ethPriceChangeInr, ethPriceChangeEur);
+            updatePrice('usdt', usdtPriceUsd, usdtPriceInr, usdtPriceEur, usdtPriceChangeUsd, usdtPriceChangeInr, usdtPriceChangeEur);
+        } else {
+            console.error('Error fetching prices:', cryptoData);
+            showError();
+        }
+    } catch (error) {
+        console.error('Error fetching prices:', error);
+        showError();
+    }
+}
+
+function showError() {
+    document.querySelector('#btc-price-usd').innerText = 'Error fetching';
+    document.querySelector('#eth-price-usd').innerText = 'Error fetching';
+    document.querySelector('#usdt-price-usd').innerText = 'Error fetching';
+}
+
+// Update price and percentage change
+function updatePrice(crypto, priceUsd, priceInr, priceEur, changeUsd, changeInr, changeEur) {
+    // Add currency symbols to the prices
+    const formattedUsdPrice = `$${priceUsd}`;
+    const formattedInrPrice = `₹${priceInr}`;
+    const formattedEurPrice = `€${priceEur}`;
+
+    // Update the displayed price changes in HTML
+    setPriceChangeText(`#${crypto}-price-change`, changeUsd);
+    setPriceChangeText(`#${crypto}-price-inr-change`, changeInr);
+    setPriceChangeText(`#${crypto}-price-eur-change`, changeEur);
+
+    // Update the HTML elements with the fetched prices
+    document.querySelector(`#${crypto}-price-usd`).innerText = formattedUsdPrice;
+    document.querySelector(`#${crypto}-price-inr`).innerText = formattedInrPrice;
+    document.querySelector(`#${crypto}-price-eur`).innerText = formattedEurPrice;
+
+    // Save the current prices as the previous prices for the next update
+    previousPrices[crypto] = { 
+        usd: parseFloat(priceUsd), 
+        inr: parseFloat(priceInr), 
+        eur: parseFloat(priceEur) 
+    };
+}
+
+
+// Function to set price change text, color, and class based on value
+function setPriceChangeText(selector, change) {
+    const element = document.querySelector(selector);
+    element.innerText = change + '%';
+
+    // Apply color and class based on the change value
+    if (parseFloat(change) < 0) {
+        element.style.color = 'red'; // Negative change
+        element.parentElement.classList.remove('plus-index');
+        element.parentElement.classList.add('minus-index');
+    } else {
+        element.style.color = 'green'; // Positive change
+        element.parentElement.classList.remove('minus-index');
+        element.parentElement.classList.add('plus-index');
+    }
+}
+
+// Fetch prices every 10 seconds
+setInterval(fetchCryptoPrices, 30000); // 30-second interval
+fetchCryptoPrices(); // Initial fetch
+
+    </script>
+    
+    <script>
+        // NewsAPI Key and URL
+        const newsapiKey = '149acd3c2c394dae8d00be80b8f965c2'; // Your NewsAPI key
+
+
+const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsapiKey}`;
+
+async function fetchNews() {
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+
+        const data = await response.json();
+        console.log('API Response:', data); // Debugging
+
+        const articles = data.articles.slice(0, 5); // First 5 articles
+        const newsList = document.getElementById('newsList');
+
+        // Clear existing news items
+        newsList.innerHTML = '';
+
+        if (articles.length === 0) {
+            // If no articles, show a message
+            const noArticlesItem = document.createElement('li');
+            noArticlesItem.className = 'ticker-item';
+            noArticlesItem.textContent = 'No articles found.';
+            newsList.appendChild(noArticlesItem);
+            return;
+        }
+
+        // Loop through the articles and create list items
+        articles.forEach((article) => {
+            const listItem = document.createElement('li');
+            listItem.className = 'ticker-item';
+
+            const link = document.createElement('a');
+            link.href = article.url;
+            link.target = '_blank';
+            link.textContent = article.title;
+
+            listItem.appendChild(link);
+            newsList.appendChild(listItem);
+        });
+
+        // After the news is injected, start the ticker animation
+        initializeTicker();
+
+    } catch (error) {
+        console.error('Error fetching news:', error);
+        const newsList = document.getElementById('newsList');
+        newsList.innerHTML = '<li>Error fetching news. Please try again later.</li>';
+    }
+}
+
+// Function to initialize the ticker animation
+function initializeTicker() {
+    const items = document.querySelectorAll('#newsList li');
+
+    if (items.length === 0) return;
+
+    let currentIndex = 0; // Track the current news item
+    const itemCount = items.length;
+
+    // Function to show the next news item
+    function showNextNewsItem() {
+        // Hide all items first
+        items.forEach(item => {
+            item.classList.remove('active'); // Remove active class
+            item.classList.remove('exit'); // Remove exit class
+            item.style.display = 'none'; // Ensure all are hidden
+        });
+
+        // Show the current item
+        items[currentIndex].classList.add('active'); // Add active class
+        items[currentIndex].style.display = 'block'; // Show the current item
+
+        // Get the height of the current item for timing
+        const currentItemHeight = items[currentIndex].offsetHeight;
+
+        // Calculate the time for showing the current item (including transition)
+        const displayTime = 8000; // Show each news item for 5 seconds
+        const transitionTime = 1800; // Transition duration of 1 second
+
+        // Move to the next index after the display time + transition time
+        setTimeout(() => {
+            items[currentIndex].classList.add('exit'); // Add exit class to move it out
+
+            // Move to the next index
+            currentIndex = (currentIndex + 1) % itemCount; // Loop back to the start
+
+            // Wait for the transition to complete, then show the next item
+            setTimeout(showNextNewsItem, transitionTime); // Show next item after exit transition
+        }, displayTime); // Pause for 5 seconds before switching
+    }
+
+    // Start the news ticker
+    showNextNewsItem();
+}
+
+// Fetch the news when the page loads
+fetchNews();
+
+// Refresh news every 30 minutes (1800000 milliseconds)
+setInterval(fetchNews, 1800000); // Adjust as per your need
+</script>
+
+    
+<script>
+    $(document).ready(() => {
+        const newsApiKey = '149acd3c2c394dae8d00be80b8f965c2'; // Replace with your actual NewsAPI key
+        const news1apiUrl = `https://newsapi.org/v2/top-headlines?category=business&country=us&apiKey=${newsApiKey}`;
+
+        async function fetchFinancialNews() {
+            try {
+                const response = await fetch(news1apiUrl);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+
+                const data = await response.json();
+                const articles = data.articles.slice(0, 6); // Get the first 7 articles
+                const marqueeContent = $('.marquee-content-items');
+
+                // Clear existing news items
+                marqueeContent.empty();
+
+                if (articles.length === 0) {
+                    marqueeContent.append(`<li><a href="#"><span class="latest-news-time">--:--</span> No financial news available</a></li>`);
+                    return;
+                }
+
+                // Loop through the articles and create list items
+                articles.forEach((article) => {
+                    const newsTime = new Date(article.publishedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    const listItem = `<li><a href="${article.url}" target="_blank"><span class="latest-news-time">${newsTime}</span> ${article.title}</a></li>`;
+                    marqueeContent.append(listItem);
+
+                    // Trigger the animation for the latest-news-time
+                    const timeElement = marqueeContent.find('li:last-child .latest-news-time');
+                    setTimeout(() => {
+                        timeElement.addClass('animate'); // Add the animate class after a short delay
+                    }, 10); // Slight delay to allow DOM update
+                });
+
+                // Initialize the Simple Marquee after updating the content
+                if ($.fn.SimpleMarquee) {
+                    $('.simple-marquee-container').SimpleMarquee({
+                        duration: 60000,
+                        padding: 0,
+                        marquee_class: '.marquee',
+                        container_class: '.simple-marquee-container',
+                        sibling_class: 0,
+                        hover: true
+                    });
+                }
+
+                // Make the marquee visible
+                $('.marquee').css('opacity', '1'); // Fade in marquee after loading news
+            } catch (error) {
+                console.error('Error fetching financial news:', error);
+                const marqueeContent = $('.marquee-content-items');
+                marqueeContent.empty().append(`<li><a href="#"><span class="latest-news-time">--:--</span> Error fetching news</a></li>`);
+            }
+        }
+
+        // Fetch financial news when the page loads
+        fetchFinancialNews();
+
+        // Optionally, refresh news every 30 minutes (1800000 milliseconds)
+        setInterval(fetchFinancialNews, 1800000);
+    });
+    </script>
+    
+    
+
+ <script>
+// Replace with your API key
+const API_KEY = 'pub_56585245ec35367f6ff2cbbb58060ffe8f1e6';
+const url = `https://newsdata.io/api/1/news?apikey=${API_KEY}&country=us&category=business`; // Customize parameters as needed
+
+// Function to replace pre-written content with API news data
+function replaceNewsContent(newsData) {
+    const blogPosts = document.querySelectorAll('.single-blog-post-slide'); // Select all single blog post slides
+
+    // Loop through each blog post and replace content with API data
+    blogPosts.forEach((postElement, index) => {
+        if (index < newsData.length) {
+            let news = newsData[index];
+
+            // Update background image
+            let imageUrl = news.image_url || 'img/bg-img/placeholder.jpg'; // Use a placeholder if the image is not provided
+            postElement.style.backgroundImage = `url(${imageUrl})`;
+
+            // Update the category tag
+            let tagElement = postElement.querySelector('.tags a');
+            tagElement.textContent = news.category || 'news';
+
+            // Update the title and link
+            let titleElement = postElement.querySelector('h3 a');
+            titleElement.textContent = news.title;
+            titleElement.href = news.link;
+
+            // Update the date
+            let dateElement = postElement.querySelector('.date a');
+            dateElement.textContent = new Date(news.pubDate).toDateString();
+        }
+    });
+}
+
+// Function to fetch news from the API
+function fetchNews() {
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            replaceNewsContent(data.results.slice(0, 4)); // Replace first 4 news items
+        })
+        .catch(error => console.error('Error fetching news from Newsdata API:', error));
+}
+
+// Call the fetch function when the document is ready
+document.addEventListener('DOMContentLoaded', fetchNews);
+
+ </script>
+    
+    
+       
+
+
+</body>
+
+</html>
